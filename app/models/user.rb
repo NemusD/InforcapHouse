@@ -21,7 +21,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   #Validaciones
+  validates :email, presence: true
+  validates :password, presence: true
+  validates :password_confirmation, presence: true
   validates :name, presence: true
   validates :phone, presence: true
+  enum role: [:user, :admin ]
 
 end
