@@ -1,6 +1,7 @@
 require 'csv'
+
 #Importar propiedades
-puts 'Importing typeProperties...'
+=begin puts 'Importing typeProperties...'
 CSV.foreach(Rails.root.join('db/seeds/csv/typeProperties.csv'), headers: true) do |row|
     TypeProperty.create! do |type_property|
         type_property.id = row[0]
@@ -13,5 +14,15 @@ CSV.foreach(Rails.root.join('db/seeds/csv/typeOffers.csv'), headers: true) do |r
     TypeOffer.create! do |type_offer|
         type_offer.id = row[0]
         type_offer.name = row[1]
+    end
+end 
+=end
+
+#importar características
+puts 'Importing features...'
+CSV.foreach(Rails.root.join('db/seeds/csv/features.csv'), headers: true) do |row|
+    Feature.create! do |feature|
+        feature.id = row[0]
+        feature .name = row[1]
     end
 end
