@@ -1,16 +1,13 @@
 # == Schema Information
 #
-# Table name: type_properties
+# Table name: type_offers
 #
 #  id         :integer          not null, primary key
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-require "test_helper"
-
-class TypePropertyTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class TypeOffer < ApplicationRecord
+    #Validaciones
+    validates :name, presence: true, uniqueness: true
 end

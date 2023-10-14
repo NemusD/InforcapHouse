@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: type_properties
+# Table name: type_offers
 #
 #  id         :integer          not null, primary key
 #  name       :string
@@ -9,7 +9,7 @@
 #
 require "test_helper"
 
-class TypePropertyTest < ActiveSupport::TestCase
+class TypeOfferTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
